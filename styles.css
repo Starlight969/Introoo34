@@ -1110,3 +1110,28 @@ textarea.glass-input {
 
     color: var(--accent-blue);
 }
+
+
+/* Minimal social cards: icon with platform name underneath */
+.social-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.7rem;
+}
+
+.social-platform-name {
+    position: relative;
+    z-index: 1;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.social-arrow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
