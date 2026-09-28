@@ -1215,3 +1215,171 @@ textarea.glass-input {
 @media (prefers-reduced-motion:reduce) {
     .status-dot,.hero-orbit-one,.hero-orbit-two { animation:none; }
 }
+
+
+/* ===== MOBILE POLISH ===== */
+@media (max-width: 768px) {
+    html, body { width:100%; max-width:100%; overflow-x:hidden; }
+    nav { padding:1rem 5%; }
+    .logo { font-size:1.2rem; }
+    .mode-switch { padding:7px 12px; font-size:.78rem; }
+    section {
+        min-height: auto;
+        padding:6.5rem 6% 5rem;
+    }
+    #hero {
+        min-height:100svh;
+        padding:7rem 6% 5rem;
+        justify-content:center;
+    }
+    .hero-kicker {
+        max-width:90%;
+        font-size:.58rem;
+        line-height:1.6;
+        letter-spacing:1.5px;
+        margin-bottom:1rem;
+    }
+    .hero-title {
+        font-size:clamp(2.3rem,12vw,3.5rem);
+        line-height:1.05;
+        margin-bottom:.8rem;
+    }
+    .hero-tagline {
+        font-size:.9rem;
+        letter-spacing:1.5px;
+        line-height:1.8;
+    }
+    .hero-background-word {
+        font-size:clamp(4.2rem,22vw,7rem);
+        max-width:100%;
+        overflow:hidden;
+        letter-spacing:.03em;
+    }
+    .hero-code-fragment {
+        left:6%;
+        bottom:10%;
+        font-size:.56rem;
+        line-height:1.6;
+    }
+    .hero-orbit-one {
+        width:230px;
+        height:230px;
+        right:-135px;
+        top:15%;
+    }
+    .hero-orbit-two {
+        width:170px;
+        height:170px;
+        left:-95px;
+        bottom:12%;
+    }
+    .scroll-cue {
+        bottom:2rem;
+        font-size:.62rem;
+    }
+    .section-number {
+        font-size:.58rem;
+        letter-spacing:2px;
+        text-align:center;
+    }
+    .section-title {
+        font-size:2rem;
+        margin-bottom:2rem;
+    }
+    .about-content {
+        gap:2rem;
+    }
+    .avatar-container {
+        width:190px;
+        height:190px;
+    }
+    .about-text p {
+        font-size:1rem;
+        line-height:1.7;
+    }
+    .skills-grid {
+        grid-template-columns:1fr;
+        gap:1rem;
+    }
+    .skill-card {
+        padding:1.5rem;
+    }
+    .social-subtitle {
+        margin-top:-1rem;
+        margin-bottom:2rem;
+        font-size:.82rem;
+        line-height:1.5;
+    }
+    .social-grid {
+        grid-template-columns:1fr;
+        gap:1rem;
+    }
+    .social-card {
+        width:100%;
+        min-height:145px;
+        padding:1.25rem;
+    }
+    .social-icon {
+        width:52px;
+        height:52px;
+        flex-basis:52px;
+    }
+    .social-arrow {
+        top:.75rem;
+        right:.75rem;
+        font-size:1rem;
+    }
+    .contact-terminal {
+        width:100%;
+        max-width:100%;
+    }
+    .terminal-bar {
+        padding:.7rem .8rem;
+        gap:.6rem;
+    }
+    .terminal-title {
+        font-size:.62rem;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+    }
+    .terminal-status { font-size:.5rem; }
+    .terminal-content {
+        padding:1.25rem;
+    }
+    .terminal-command {
+        font-size:.68rem;
+    }
+    .contact-terminal .form-title {
+        font-size:1.3rem;
+    }
+    .terminal-subtitle {
+        font-size:.78rem;
+        line-height:1.5;
+    }
+    .glass-input {
+        font-size:16px;
+        padding:12px 13px;
+    }
+    textarea.glass-input {
+        min-height:110px;
+    }
+    .btn {
+        font-size:.78rem;
+        padding:.9rem 1rem;
+    }
+    footer { padding:2rem 6%; }
+}
+
+@media (max-width: 420px) {
+    section { padding-left:5%; padding-right:5%; }
+    #hero { padding-left:5%; padding-right:5%; }
+    .hero-kicker { font-size:.52rem; }
+    .hero-title { font-size:2.25rem; }
+    .hero-tagline { font-size:.8rem; }
+    .hero-background-word { font-size:3.8rem; }
+    .hero-code-fragment { font-size:.5rem; }
+    .section-title { font-size:1.8rem; }
+    .avatar-container { width:170px; height:170px; }
+    .social-card { min-height:135px; }
+}
