@@ -451,25 +451,259 @@
         </div>
     </section>
 
-    <section id="contact" class="reveal">
-        <h2 class="section-title">Let's Connect</h2>
-
-        <!--
+    /* --- Social Links --- */
+      <!--
             SOCIAL LINKS — just paste your links in the href="" spots below.
             To add a new platform: copy one whole <a class="social-link"...>...</a> block,
             paste it inside the div, the icon (any SVG icon works), and the text.
         -->
-   <div class="social-links">
-  <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
-    <!-- Inline SVG Example (GitHub) -->
-    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-  </a>
-  
-  <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">
-    <!-- Inline SVG Example (Instagram) -->
-    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-  </a>
-</div>
+
+
+.social-section {
+    width: 100%;
+}
+
+.social-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.social-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    min-height: 150px;
+    padding: 1.5rem;
+    overflow: hidden;
+
+    border: 1px solid var(--glass-border);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.045),
+            rgba(255,255,255,0.015)
+        );
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.social-card::before {
+    content: "";
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    right: -55px;
+    top: -55px;
+
+    background: var(--social-glow);
+
+    filter: blur(25px);
+
+    opacity: 0.7;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--social-accent);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.25),
+        0 0 25px var(--social-glow);
+}
+
+.social-card:hover::before {
+    transform: scale(1.6);
+    opacity: 1;
+}
+
+/* Icon */
+
+.social-icon {
+    position: relative;
+    z-index: 1;
+
+    flex: 0 0 58px;
+
+    width: 58px;
+    height: 58px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 17px;
+
+    border: 1px solid var(--social-accent);
+
+    color: var(--social-accent);
+
+    background: rgba(0,0,0,0.2);
+
+    box-shadow:
+        inset 0 0 18px var(--social-glow);
+
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.social-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+}
+
+/* Text */
+
+.social-info {
+    position: relative;
+    z-index: 1;
+
+    min-width: 0;
+    flex: 1;
+}
+
+.social-label {
+    color: var(--text-muted);
+
+    font-size: 0.72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 0.35rem;
+}
+
+.social-name {
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    margin-bottom: 0.35rem;
+}
+
+.social-desc {
+    color: var(--text-muted);
+
+    font-size: 0.8rem;
+
+    line-height: 1.4;
+}
+
+/* Arrow */
+
+.social-arrow {
+    position: relative;
+    z-index: 1;
+
+    align-self: flex-start;
+
+    color: var(--text-muted);
+
+    font-size: 1.25rem;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.social-card:hover .social-arrow {
+    transform: translate(4px, -4px);
+    color: var(--social-accent);
+}
+
+/* Individual platform themes */
+
+.instagram-card {
+    --social-accent: #ff4fd8;
+    --social-glow: rgba(255,79,216,0.16);
+}
+
+.discord-card {
+    --social-accent: #8b7cff;
+    --social-glow: rgba(139,124,255,0.16);
+}
+
+.chess-card {
+    --social-accent: #00f3a6;
+    --social-glow: rgba(0,243,166,0.15);
+}
+
+/* Better anonymous-message container */
+
+.contact-container {
+    max-width: 760px;
+    width: 100%;
+    margin: 4rem auto 0;
+}
+
+.form-description {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.3rem;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    color: var(--text-muted);
+
+    font-size: 0.8rem;
+
+    letter-spacing: 1px;
+}
+
+.glass-input {
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.025);
+}
+
+.glass-input:focus {
+    border-color: var(--accent-blue);
+}
+
+.success-hidden {
+    display: none;
+
+    margin-top: 1rem;
+
+    color: var(--accent-blue);
+}
+
+      
              
         </div>
 
