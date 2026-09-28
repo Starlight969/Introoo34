@@ -41,20 +41,14 @@
     ========================= -->
 
     <section id="hero">
-
-        <h1 class="hero-title">
-            Hi, I'm <span class="text-gradient">Shubham</span>
-        </h1>
-
-        <p class="hero-tagline">
-            Student | Unemployed | Explorer
-        </p>
-
-        <div class="scroll-cue">
-            <span>Scroll</span>
-            <span class="chevron"></span>
-        </div>
-
+        <div class="hero-orbit hero-orbit-one"></div>
+        <div class="hero-orbit hero-orbit-two"></div>
+        <div class="hero-kicker"><span class="status-dot"></span> ONLINE / SOMEWHERE ON THE INTERNET</div>
+        <div class="hero-background-word">SHUBHAM</div>
+        <h1 class="hero-title">Hi, I'm <span class="text-gradient">Shubham</span></h1>
+        <p class="hero-tagline">Student <span>•</span> Explorer <span>•</span> Builder</p>
+        <div class="hero-code-fragment">// currently exploring<br>// probably overthinking</div>
+        <div class="scroll-cue"><span>Scroll</span><span class="chevron"></span></div>
     </section>
 
     <!-- =========================
@@ -62,10 +56,8 @@
     ========================= -->
 
     <section id="about" class="reveal">
-
-        <h2 class="section-title">
-            Who I Am
-        </h2>
+        <div class="section-number">01 / WHO I AM</div>
+        <h2 class="section-title">Who I Am</h2>
 
         <div class="about-content">
 
@@ -99,10 +91,8 @@
     ========================= -->
 
     <section id="skills" class="reveal">
-
-        <h2 class="section-title">
-            What I Do
-        </h2>
+        <div class="section-number">02 / WHAT I DO</div>
+        <h2 class="section-title">What I Do</h2>
 
         <div class="skills-grid">
 
@@ -147,6 +137,7 @@
     ========================= -->
 
     <section id="social" class="reveal">
+        <div class="section-number">03 / FIND ME</div>
 
         <div class="social-section">
 
@@ -239,121 +230,28 @@
     ========================= -->
 
     <section id="contact" class="reveal">
-
-        <div class="contact-wrapper glass-card">
-
-            <div
-                class="form-title text-gradient"
-                style="font-size: 1.5rem;"
-            >
-                Secure Transmission
+        <div class="contact-terminal contact-wrapper glass-card">
+            <div class="terminal-bar">
+                <div class="terminal-dots"><span></span><span></span><span></span></div>
+                <div class="terminal-title">shubham@internet:~</div>
+                <div class="terminal-status">● LIVE</div>
             </div>
-
-            <p
-                style="
-                    text-align:center;
-                    color:var(--text-muted);
-                    margin-bottom:2rem;
-                "
-            >
-                You can use this to send me anonymous messages too,
-                random teas, or even curse me. So don't hold back here.
-            </p>
-
-            <form
-                action="https://api.web3forms.com/submit"
-                method="POST"
-            >
-
-                <input
-                    type="hidden"
-                    name="access_key"
-                    value="cfc332d8-35d4-4bf2-adbd-300006007c9e"
-                >
-
-                <input
-                    type="hidden"
-                    name="subject"
-                    value="New Transmission On your Website"
-                >
-
-                <input
-                    type="checkbox"
-                    name="botcheck"
-                    class="hidden"
-                    style="display:none;"
-                >
-
-                <div class="input-group">
-
-                    <label for="userName">
-                        Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="userName"
-                        name="name"
-                        placeholder="Enter your name"
-                        required
-                        class="glass-input hover-target"
-                    >
-
-                </div>
-
-                <div class="input-group">
-
-                    <label for="userEmail">
-                        Email
-                    </label>
-
-                    <input
-                        type="email"
-                        id="userEmail"
-                        name="email"
-                        placeholder="Enter your email"
-                        required
-                        class="glass-input hover-target"
-                    >
-
-                </div>
-
-                <div class="input-group">
-
-                    <label for="userMessage">
-                        Message
-                    </label>
-
-                    <textarea
-                        id="userMessage"
-                        name="message"
-                        rows="5"
-                        placeholder="Enter your message, or coordinates...."
-                        required
-                        class="glass-input hover-target"
-                    ></textarea>
-
-                </div>
-
-                <button
-                    type="submit"
-                    class="btn hover-target"
-                    id="submit-btn"
-                >
-                    Send Transmission
-                </button>
-
-                <p
-                    id="success-msg"
-                    class="success-hidden"
-                >
-                    Thanks for your message btw
-                </p>
-
-            </form>
-
+            <div class="terminal-content">
+                <div class="terminal-command">$ ./send_message</div>
+                <div class="form-title text-gradient">Secure Transmission</div>
+                <p class="terminal-subtitle">Send a message into the void. Anonymous messages welcome.</p>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="cfc332d8-35d4-4bf2-adbd-300006007c9e">
+                    <input type="hidden" name="subject" value="New Transmission On your Website">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+                    <div class="input-group"><label for="userName">NAME</label><input type="text" id="userName" name="name" placeholder="Enter your name" required class="glass-input hover-target"></div>
+                    <div class="input-group"><label for="userEmail">EMAIL</label><input type="email" id="userEmail" name="email" placeholder="Enter your email" required class="glass-input hover-target"></div>
+                    <div class="input-group"><label for="userMessage">MESSAGE</label><textarea id="userMessage" name="message" rows="5" placeholder="Type your transmission..." required class="glass-input hover-target"></textarea></div>
+                    <button type="submit" class="btn hover-target" id="submit-btn">EXECUTE TRANSMISSION ↗</button>
+                    <p id="success-msg" class="success-hidden">Transmission received. Thanks for stopping by.</p>
+                </form>
+            </div>
         </div>
-
     </section>
 
     <!-- =========================
