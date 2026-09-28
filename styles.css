@@ -116,3 +116,18 @@
   transform: translateY(-1px);
 }
 
+
+
+.social-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 52px !important; /* Forces the wider size */
+  height: 52px !important; /* Forces the taller size */
+  background-color: #121214 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  color: #a1a1aa !important;
+  text-decoration: none !important;
+}
+
