@@ -1,133 +1,114 @@
 /* --- Traditional Contact Container Styles --- */
-        .contact-container {
-            max-width: 550px;
-            margin: 0 auto;
-            width: 100%;
-            padding: 3rem 2.5rem;
-            position: relative;
-        }
+.contact-container {
+    max-width: 550px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 3rem 2.5rem;
+    position: relative;
+}
 
-        .form-title {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            letter-spacing: 1px;
-        }
+.form-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
 
-        .input-group {
-            margin-bottom: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
+.input-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
-        .input-group label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-family: 'Space Grotesk', sans-serif;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+.input-group label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-        .glass-input {
-            width: 100%;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--glass-border);
-            border-radius: 8px;
-            padding: 14px 16px;
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
+.glass-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
 
-        .glass-input::placeholder {
-            color: rgba(255, 255, 255, 0.2);
-            font-weight: 300;
-        }
+.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 300;
+}
 
-        .glass-input:focus {
-            outline: none;
-            border-color: var(--accent-blue);
-            background: rgba(0, 243, 255, 0.05);
-            box-shadow: 0 0 15px rgba(0, 243, 255, 0.15);
-        }
+.glass-input:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    background: rgba(0, 243, 255, 0.05);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.15);
+}
 
-        textarea.glass-input {
-            resize: vertical; /* Allows user to drag the bottom but keeps width locked */
-            min-height: 120px;
-        }
+textarea.glass-input {
+    resize: vertical;
+    min-height: 120px;
+}
 
-        /* Success Message Styling */
-        .success-hidden {
-            opacity: 0;
-            transform: translateY(10px);
-            color: var(--accent-blue);
-            font-family: 'Space Grotesk', sans-serif;
-            transition: all 0.5s ease;
-            height: 0;
-            overflow: hidden;
-            text-align: center;
-            margin-top: 1rem;
-        }
+/* Success Message Styling */
+.success-hidden {
+    opacity: 0;
+    transform: translateY(10px);
+    color: var(--accent-blue);
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.5s ease;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 1rem;
+}
 
-        .success-visible {
-            opacity: 1;
-            transform: translateY(0);
-            height: auto;
-            margin-top: 1.5rem;
-        }
+.success-visible {
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+    margin-top: 1.5rem;
+}
 
-
+/* --- Social Links & Button Styles --- */
 .social-links {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 .social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px; /* Increased from 44px */
-  height: 52px; /* Increased from 44px */
-  background-color: #121214;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px; /* Slightly adjusted curve for the bigger size */
-  color: #a1a1aa;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 52px !important;
+    height: 52px !important;
+    background-color: #121214 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 14px !important;
+    color: #a1a1aa !important;
+    text-decoration: none !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Optional: If you want the icons inside to scale up too, 
-   you can update your SVG tags from width="20" height="20" to width="24" height="24" */
-
 .social-icon:hover {
-  background-color: #1a1a1e;
-  border-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5);
+    background-color: #1a1a1e !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5) !important;
 }
 
 .social-icon:active {
-  transform: translateY(-1px);
+    transform: translateY(-1px) !important;
 }
-
-
-
-.social-icon {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 52px !important; /* Forces the wider size */
-  height: 52px !important; /* Forces the taller size */
-  background-color: #121214 !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 14px !important;
-  color: #a1a1aa !important;
-  text-decoration: none !important;
-}
-
