@@ -77,3 +77,42 @@
             height: auto;
             margin-top: 1.5rem;
         }
+
+
+/* Container for alignment */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Individual Icon Button */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #121214; /* Deep dark base */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle border */
+  border-radius: 12px; /* Smooth rounded corners */
+  color: #a1a1aa; /* Muted icon color */
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+/* Hover State */
+.social-icon:hover {
+  background-color: #1a1a1e;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff; /* Bright white on hover */
+  transform: translateY(-3px); /* Gentle lift effect */
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5); /* Soft drop shadow */
+}
+
+/* Active click effect */
+.social-icon:active {
+  transform: translateY(-1px);
+}
