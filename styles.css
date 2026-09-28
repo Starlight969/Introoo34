@@ -78,6 +78,41 @@ textarea.glass-input {
     margin-top: 1.5rem;
 }
 
+
+
+@media (max-width: 768px) {
+
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-card {
+        min-height: 125px;
+    }
+
+    .avatar-container {
+        margin: 0 auto;
+    }
+
+    .traits {
+        justify-content: center;
+    }
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+
+    * {
+        cursor: auto;
+    }
+}
+
 /* --- Social Links --- */
 
 .social-section {
